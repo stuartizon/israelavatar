@@ -8,7 +8,7 @@ export const Content = () => {
   const canvas = useRef<HTMLCanvasElement>(null)
 
   return (
-    <div className='text-center container mx-auto h-screen flex flex-col items-center justify-center'>
+    <div className='text-center md:container mx-auto p-2 h-screen flex flex-col items-center md:justify-center'>
       <h1 className='text-5xl my-3'>Israel Avatar</h1>
       <p>
         Use this tool to create an avatar with the Israeli flag superimposed.

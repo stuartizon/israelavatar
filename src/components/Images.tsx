@@ -28,7 +28,7 @@ export const Images: React.FC<Props> = ({ canvas, image }) => {
   }
 
   return (
-    <div className='flex space-x-32'>
+    <div className='flex md:space-x-32 flex-col md:flex-row space-y-4 md:space-y-0'>
       <div>
         <Placeholder>
           {image && (
