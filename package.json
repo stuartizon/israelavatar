@@ -5,6 +5,8 @@
   "author": "Stuart Izon <stuart.izon@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf dist",
+    "build": "webpack",
     "start": "webpack-dev-server"
   },
   "dependencies": {
@@ -17,6 +19,7 @@
     "@types/react-avatar-editor": "^13.0.0",
     "@types/react-dom": "^18.2.13",
     "autoprefixer": "^10.4.16",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",

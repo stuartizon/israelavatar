@@ -1,4 +1,5 @@
 var path = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -10,15 +11,15 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public')
-    }
-  },
   module: {
     rules: [
-      { test: /\.tsx$/, use: ['ts-loader']},
+      { test: /\.tsx$/, use: ['ts-loader'] },
       { test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader'] }
     ]
-  }
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: 'public', to: '.' }]
+    })
+  ]
 }
